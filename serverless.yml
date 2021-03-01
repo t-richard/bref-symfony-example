@@ -17,7 +17,7 @@ package:
         - tests/**
         - var/**
     include:
-        - var/cache/prod
+        - var/cache/prod/**
 
 functions:
     website:
