@@ -15,6 +15,9 @@ package:
     exclude:
         - node_modules/**
         - tests/**
+        - var/**
+    include:
+        - var/cache/prod
 
 functions:
     website:
