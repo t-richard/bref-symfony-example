@@ -21,7 +21,7 @@ jobs:
       with:
         composer-options: "--prefer-dist --optimize-autoloader --no-dev"
       env:
-        - APP_ENV: prod
+        APP_ENV: prod
     - name: serverless deploy
       uses: serverless/github-action@master
       with:
