@@ -56,4 +56,9 @@ class Kernel extends BaseKernel
 
         return parent::getCacheDir();
     }
+
+    public function getBuildDir(): string
+    {
+        return parent::getCacheDir();
+    }
 }
