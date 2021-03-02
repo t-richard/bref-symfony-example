@@ -13,10 +13,14 @@ class HomeController extends AbstractController
     /**
      * @Route("/", name="home")
      */
-    public function index(Request $request, string $cacheDir): Response
+    public function index(): Response
     {
         $finder = new Finder();
-        $files = $finder->in('/tmp/cache');
-        return $this->json(['files' => iterator_to_array($files)]);
+
+        if (is_dir('/tmp/cache')) {
+            $files = $finder->in('/tmp/cache');
+        }
+
+        return $this->json(['files' => $files ?? null]);
     }
 }

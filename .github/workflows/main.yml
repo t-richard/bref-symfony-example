@@ -19,7 +19,7 @@ jobs:
         php-version: "7.4"
     - uses: "ramsey/composer-install@v1"
       with:
-        composer-options: "--prefer-dist --optimize-autoloader --no-dev"
+        composer-options: "--prefer-dist --optimize-autoloader --no-dev --classmap-authoritative"
       env:
         APP_ENV: prod
     - name: serverless deploy
