@@ -24,7 +24,8 @@ class HomeController extends AbstractController
         return $this->json([
             'files' => $files ?? null,
             'context' => array_keys($_SERVER),
-            'env' => array_keys($_ENV)
+            'env' => array_keys($_ENV),
+            'request' => $_SERVER['LAMBDA_REQUEST_CONTEXT'],
         ]);
     }
 }
