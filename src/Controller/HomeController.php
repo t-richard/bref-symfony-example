@@ -16,7 +16,7 @@ class HomeController extends AbstractController
     public function index(Request $request, string $cacheDir): Response
     {
         $finder = new Finder();
-        $files = $finder->in($cacheDir);
+        $files = $finder->in('/tmp/cache');
         return $this->json(['files' => iterator_to_array($files)]);
     }
 }
