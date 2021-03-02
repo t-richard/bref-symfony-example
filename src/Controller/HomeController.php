@@ -21,6 +21,9 @@ class HomeController extends AbstractController
             $files = $finder->in('/tmp/cache');
         }
 
-        return $this->json(['files' => $files ?? null]);
+        return $this->json([
+            'files' => $files ?? null,
+            'context' => $_SERVER['LAMBDA_CONTEXT']
+        ]);
     }
 }
