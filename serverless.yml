@@ -7,7 +7,6 @@ provider:
     environment:
         # Symfony environment variables
         APP_ENV: prod
-        LAMBDA_TASK_ROOT: test
 
 plugins:
     - ./vendor/bref/bref
