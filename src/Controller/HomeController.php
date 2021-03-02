@@ -13,7 +13,7 @@ class HomeController extends AbstractController
     /**
      * @Route("/", name="home")
      */
-    public function index(): Response
+    public function index(Request $request): Response
     {
         $finder = new Finder();
 
@@ -23,6 +23,7 @@ class HomeController extends AbstractController
 
         return $this->json([
             'files' => $files ?? null,
+            'ip' => $request->getClientIp(),
             'context' => array_keys($_SERVER),
             'env' => array_keys($_ENV),
             'request' => $_SERVER['LAMBDA_REQUEST_CONTEXT'],
