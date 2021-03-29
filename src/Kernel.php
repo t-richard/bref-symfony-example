@@ -2,7 +2,6 @@
 
 namespace App;
 
-use phpDocumentor\Reflection\Types\Parent_;
 use Symfony\Bundle\FrameworkBundle\Kernel\MicroKernelTrait;
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 use Symfony\Component\HttpKernel\Kernel as BaseKernel;
