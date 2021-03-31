@@ -8,6 +8,9 @@
     "bref/bref": {
         "version": "1.2.0"
     },
+    "bref/symfony-bridge": {
+        "version": "0.1.1"
+    },
     "doctrine/annotations": {
         "version": "1.0",
         "recipe": {
